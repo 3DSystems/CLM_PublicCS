@@ -1,0 +1,43 @@
+name: Information Request
+description: Ask a question or request information about the project.
+title: "[INFO]: "
+labels: ["question", "information-request"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for reaching out! Please fill out the form below so we can assist you with your request.
+  - type: textarea
+    id: request-description
+    attributes:
+      label: What information do you need?
+      description: Provide a clear and concise description of what you are looking for.
+      placeholder: I am looking for details on...
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context or Use Case
+      description: Explain how or why you plan to use this information.
+      placeholder: This will help us build a custom integration...
+    validations:
+      required: false
+  - type: textarea
+    id: references
+    attributes:
+      label: References
+      description: Link any relevant files, documentation pages, or existing issues.
+      placeholder: |
+        - Link to doc:
+        - Link to code line:
+    validations:
+      required: false
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Self-Check
+      description: Please verify the following before submitting.
+      options:
+        - label: I have searched the existing issues and documentation, and my question is not answered there.
+          required: true

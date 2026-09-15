@@ -1,0 +1,53 @@
+name: 📢 Information Sharing
+description: Share general knowledge, architectural summaries, updates, or helpful resources with the team.
+title: "[INFO] "
+labels: ["documentation", "information"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for sharing this information with the team! Please fill out the sections below to keep our knowledge base clean and accessible.
+  - type: textarea
+    id: summary
+    attributes:
+      label: 📝 Summary
+      description: Provide a quick, 2-3 sentence overview of what this information is about.
+      placeholder: "e.g., An overview of our new caching layer setup..."
+    validations:
+      required: true
+  - type: textarea
+    id: details
+    attributes:
+      label: 📖 Detailed Information
+      description: Dive deep into the information you want to share. You can use full Markdown formatting here (code blocks, bullet points, etc.).
+      placeholder: "Enter details, steps, architecture choices, or explanations here..."
+    validations:
+      required: true
+  - type: dropdown
+    id: target-audience
+    attributes:
+      label: 👥 Target Audience
+      description: Who will benefit the most from this information?
+      multiple: true
+      options:
+        - Frontend Developers
+        - Backend Developers
+        - DevOps / Infrastructure
+        - Product Management
+        - All Team Members
+  - type: textarea
+    id: resources
+    attributes:
+      label: 🔗 Links & Resources
+      description: Add links to related documentation, external tutorials, metrics dashboards, or code references.
+      placeholder: "- [Confluence Page](url)\n- [Design Doc](url)"
+    validations:
+      required: false
+  - type: textarea
+    id: action-items
+    attributes:
+      label: 🛑 Next Steps / Action Items (Optional)
+      description: Is there anything the team needs to do after reading this?
+      placeholder: "- [ ] Complete the migration before Friday\n- [ ] Update your local environment variables"
+    validations:
+      required: false
