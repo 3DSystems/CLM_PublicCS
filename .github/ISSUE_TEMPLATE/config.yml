@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Private support
+    url: https://3dsystems.com//support
+    about: Use this channel for confidential information.
+  - name: Security vulnerability
+    url: https://github.com/3dsystems/CLM_PublicCS/security/advisories/new
+    about: Report security vulnerabilities privately.
